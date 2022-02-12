@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A26A36527B8754100BCA7DD /* MovieCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26A36427B8754100BCA7DD /* MovieCellTableViewCell.swift */; };
+		8A26A36827B87B3300BCA7DD /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8A26A36727B87B3300BCA7DD /* AlamofireImage */; };
 		8AC9B46527B84490006BEEEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B46427B84490006BEEEF /* AppDelegate.swift */; };
 		8AC9B46727B84490006BEEEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B46627B84490006BEEEF /* SceneDelegate.swift */; };
 		8AC9B46927B84490006BEEEF /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B46827B84490006BEEEF /* MovieViewController.swift */; };
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A26A36427B8754100BCA7DD /* MovieCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellTableViewCell.swift; sourceTree = "<group>"; };
 		8AC9B46127B84490006BEEEF /* Flixter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC9B46427B84490006BEEEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AC9B46627B84490006BEEEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A26A36827B87B3300BCA7DD /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 				8AC9B46627B84490006BEEEF /* SceneDelegate.swift */,
 				8AC9B46827B84490006BEEEF /* MovieViewController.swift */,
 				8AC9B46A27B84490006BEEEF /* Main.storyboard */,
+				8A26A36427B8754100BCA7DD /* MovieCellTableViewCell.swift */,
 				8AC9B46D27B84491006BEEEF /* Assets.xcassets */,
 				8AC9B46F27B84491006BEEEF /* LaunchScreen.storyboard */,
 				8AC9B47227B84491006BEEEF /* Info.plist */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = Flixter;
+			packageProductDependencies = (
+				8A26A36727B87B3300BCA7DD /* AlamofireImage */,
+			);
 			productName = Flixter;
 			productReference = 8AC9B46127B84490006BEEEF /* Flixter.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 8AC9B45827B8448F006BEEEF;
+			packageReferences = (
+				8A26A36627B87B3300BCA7DD /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 8AC9B46227B84490006BEEEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +271,7 @@
 			files = (
 				8AC9B46927B84490006BEEEF /* MovieViewController.swift in Sources */,
 				8AC9B46527B84490006BEEEF /* AppDelegate.swift in Sources */,
+				8A26A36527B8754100BCA7DD /* MovieCellTableViewCell.swift in Sources */,
 				8AC9B46727B84490006BEEEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A26A36627B87B3300BCA7DD /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A26A36727B87B3300BCA7DD /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A26A36627B87B3300BCA7DD /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AC9B45927B8448F006BEEEF /* Project object */;
 }

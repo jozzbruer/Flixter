@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
@@ -43,13 +44,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cells = UITableViewCell()
-        
+        let cells = tableView.dequeueReusableCell(withIdentifier: "Movie Cell") as! MovieCellTableViewCell
+        let base_url = "https://image.tmdb.org/t/p/original"
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
+        let desc = movie["overview"] as! String
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: base_url + posterPath)
         
-        cells.textLabel?.text = title
-        
+        cells.titleLabel.text = title
+        cells.descriptionLabel.text = desc
+        cells.posterView.af_setImage(withURL: posterUrl!)
         return cells
     }
 
