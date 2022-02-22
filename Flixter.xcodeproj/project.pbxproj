@@ -18,6 +18,7 @@
 		8AC9B47C27B84491006BEEEF /* FlixterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B47B27B84491006BEEEF /* FlixterTests.swift */; };
 		8AC9B48627B84491006BEEEF /* FlixterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B48527B84491006BEEEF /* FlixterUITests.swift */; };
 		8AC9B48827B84491006BEEEF /* FlixterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9B48727B84491006BEEEF /* FlixterUITestsLaunchTests.swift */; };
+		8AEBE09D27C4CB970020EDEE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEBE09C27C4CB970020EDEE /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8AC9B48127B84491006BEEEF /* FlixterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC9B48527B84491006BEEEF /* FlixterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixterUITests.swift; sourceTree = "<group>"; };
 		8AC9B48727B84491006BEEEF /* FlixterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AEBE09C27C4CB970020EDEE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,10 @@
 		8AC9B45827B8448F006BEEEF = {
 			isa = PBXGroup;
 			children = (
+				8AEBE09B27C4CB810020EDEE /* API */,
+				8AEBE09A27C4CAE20020EDEE /* Screens */,
+				8AEBE09927C4CACD0020EDEE /* Controllers */,
+				8AEBE09827C4CAA30020EDEE /* Cells */,
 				8AC9B46327B84490006BEEEF /* Flixter */,
 				8AC9B47A27B84491006BEEEF /* FlixterTests */,
 				8AC9B48427B84491006BEEEF /* FlixterUITests */,
@@ -105,11 +111,7 @@
 			children = (
 				8AC9B46427B84490006BEEEF /* AppDelegate.swift */,
 				8AC9B46627B84490006BEEEF /* SceneDelegate.swift */,
-				8AC9B46827B84490006BEEEF /* MovieViewController.swift */,
-				8AC9B46A27B84490006BEEEF /* Main.storyboard */,
-				8A26A36427B8754100BCA7DD /* MovieCellTableViewCell.swift */,
 				8AC9B46D27B84491006BEEEF /* Assets.xcassets */,
-				8AC9B46F27B84491006BEEEF /* LaunchScreen.storyboard */,
 				8AC9B47227B84491006BEEEF /* Info.plist */,
 			);
 			path = Flixter;
@@ -130,6 +132,39 @@
 				8AC9B48727B84491006BEEEF /* FlixterUITestsLaunchTests.swift */,
 			);
 			path = FlixterUITests;
+			sourceTree = "<group>";
+		};
+		8AEBE09827C4CAA30020EDEE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A26A36427B8754100BCA7DD /* MovieCellTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8AEBE09927C4CACD0020EDEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9B46827B84490006BEEEF /* MovieViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8AEBE09A27C4CAE20020EDEE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9B46A27B84490006BEEEF /* Main.storyboard */,
+				8AC9B46F27B84491006BEEEF /* LaunchScreen.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8AEBE09B27C4CB810020EDEE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8AEBE09C27C4CB970020EDEE /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +308,7 @@
 				8AC9B46527B84490006BEEEF /* AppDelegate.swift in Sources */,
 				8A26A36527B8754100BCA7DD /* MovieCellTableViewCell.swift in Sources */,
 				8AC9B46727B84490006BEEEF /* SceneDelegate.swift in Sources */,
+				8AEBE09D27C4CB970020EDEE /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
