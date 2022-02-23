@@ -6,27 +6,37 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
 
     var movie: [String: Any]!
     
+    @IBOutlet weak var backdrop: UIImageView!
+    @IBOutlet weak var profile: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print(movie["title"])
+        nameLabel.text = movie["title"] as? String
+        dateLabel.text = movie["release_date"] as? String
+        descriptionLabel.text = movie["overview"] as? String
+        
+        let base_url = "https://image.tmdb.org/t/p/original"
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: base_url + posterPath)
+        profile.af.setImage(withURL: posterUrl!)
+        
+        let backdropPath = movie["backdrop_path"] as! String
+        let backdropUrl = URL(string: base_url + backdropPath )
+        
+        
+        backdrop.af.setImage(withURL: backdropUrl!)
     }
+        
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
