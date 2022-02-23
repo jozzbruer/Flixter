@@ -11,6 +11,7 @@ import AlamofireImage
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     @IBOutlet weak var tableView: UITableView!
+    var link = "https://api.themoviedb.org/3/movie/now_playing?api_key=d443226de816e358594a7fa4c7384b2b"
     var moviesArr = [[String: Any]]()
     
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func getAPIdata(){
-        API.getMovies(){(movies) in
+        API.getMovies(link){(movies) in
             guard let movies = movies else{
                 return
             }
