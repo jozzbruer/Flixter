@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CFR-ND-BAv">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Movie Cell" rowHeight="190" id="iNO-ti-aQn" customClass="MovieCellTableViewCell" customModule="Flixter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNO-ti-aQn" id="Ihb-I6-xsD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
@@ -48,6 +49,7 @@
                                     <outlet property="descriptionLabel" destination="0e6-Wb-TMM" id="zol-NG-HCf"/>
                                     <outlet property="posterView" destination="5OH-WC-eau" id="lOC-Gw-ZVv"/>
                                     <outlet property="titleLabel" destination="ZDl-Gk-mgf" id="t1A-LR-vgk"/>
+                                    <segue destination="hqx-Kt-XjY" kind="show" id="cpc-da-ZtX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -60,6 +62,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="S8W-Ct-Oi7">
+            <objects>
+                <viewController id="hqx-Kt-XjY" customClass="MovieDetailsViewController" customModule="Flixter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufs-bR-aUU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l06-C7-I76"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6pl-sI-Gc3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkP-a2-fLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h6F-Xo-tHu">

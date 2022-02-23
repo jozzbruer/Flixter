@@ -50,6 +50,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cells.posterView.af.setImage(withURL: posterUrl!)
         return cells
     }
+    
+   
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Find the selected table view i pressed
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = moviesArr[indexPath.row]
+        
+        //Pass the selected movie for to the destination view controller
+        let movieDetailsViewController = segue.destination as! MovieDetailsViewController
+        movieDetailsViewController.movie = movie
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+   
 
 }
 
