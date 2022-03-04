@@ -29,7 +29,6 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
             guard let movies = movies else{
                 return
             }
-            print(movies)
             self.moviesArr = movies
             self.collectionView.reloadData()
     
